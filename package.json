@@ -1,27 +1,29 @@
 {
-  "name": "react-boilerplate-2",
-  "version": "0.0.1",
+  "name": "react-flux-boilerplate",
+  "version": "0.1.0",
   "author": {
     "name": "Kiki le singe"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kiki-le-singe/react-boilerplate-2.git"
+    "url": "https://github.com/kiki-le-singe/react-flux-boilerplate.git"
   },
-  "homepage": "https://github.com/kiki-le-singe/react-boilerplate-2",
-  "bugs": "https://github.com/kiki-le-singe/react-boilerplate-2/issues",
+  "homepage": "https://github.com/kiki-le-singe/react-flux-boilerplate",
+  "bugs": "https://github.com/kiki-le-singe/react-flux-boilerplate/issues",
   "keywords": [
     "boilerplate",
     "react",
     "react-router",
-    "material-ui",
+    "flux",
+    "framework7",
     "font-awesome",
     "es6",
+    "ES2015",
     "babeljs",
-    "browserify",
+    "webpack",
     "express"
   ],
-  "description": "This is a boilerplate for starting a project with ReactJS... Express is used to serve the application.",
+  "description": "This is a boilerplate for starting a project with ReactJS... Webpack Dev Server is used to serve the application in dev mode. Express is used for the api",
   "engines": {
     "node": ">= 0.12.0"
   },
