@@ -2,95 +2,89 @@
 
 ## Introduction
 
-> This project is first to train with tools like [babeljs.io](https://babeljs.io/), [React](https://facebook.github.io/react/index.html), ES6... And then I used it as Boilerplate for my react projects.
+> This project is mainly to train with tools like [babeljs.io](https://babeljs.io/), [React](https://facebook.github.io/react/), [Flux](https://facebook.github.io/flux/), ES6/ES2015... And then I used it as Boilerplate for my react projects.
 
 ## Requirements
 
  * [nodejs](http://nodejs.org/)
- * [Gulp](http://gulpjs.com/)
  * [sass](http://sass-lang.com/)
 
 ## Optional
 
+ * [Gulp](http://gulpjs.com/)
  * [Mongodb](http://www.mongodb.org/)
   * [Install on Ubuntu](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
   * [Install on OS X](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
 
 ## Installation
 
-* `$ git clone git@github.com:kiki-le-singe/react-boilerplate.git`
-* `$ cd react-boilerplate`
+* `$ git clone git@github.com:kiki-le-singe/react-flux-boilerplate.git`
+* `$ cd react-flux-boilerplate`
 * `$ npm install`
 
-## Gulp tasks
+## Scripts
 
-* `$ gulp serve`
+* `$ npm start`
 
-Then serve the app on `localhost:3000` with [Browsersync](http://www.browsersync.io/) and opens your default browser
+Built the project and starts a web service on `localhost:8080`. It uses a proxy to hit on `localhost:9000` and to consume the api.
 
-* `$ gulp serve --stub`
+* `$ npm run build`
 
-Makes the same thing that the above command, except that the 'stub' option allows to enabled or not the retrieving of fake datas.
+Built the project.
 
-* `$ gulp test`
+> Results is located in the ./build directory.
 
-Runs tests located in `/__tests__`.
+* `$ npm run deploy`
 
-> For now `$ gulp test` doesn't exist (Coming soon). You can to use the `karma start` command. It is useful for debug mode.
+It does some optimizations and builds the project for the production.
 
-* `$ gulp dist`
+> Results is located in the ./dist directory.
 
-Coming soon...
+* `$ node server app.production.js`
 
-* `$ gulp build`
+Serves the app in production mode on `localhost:9000`.
 
-Coming soon...
+> Don't forget to run `npm run deploy` before.
 
-* `$ gulp docs`
+## Gulp Tasks
 
-Coming soon...
+* `$ gulp iconify`
 
-* `$ gulp plato`
-
-Coming soon...
-
-* `$ gulp changelog`
-
-Coming soon...
+See ['A mystical CSS icon solution', grunticon-like build system.](https://github.com/gavro/gulp-iconify).
 
 ## Included JavaScript libraries
 
  * [React](https://facebook.github.io/react/)
- * [REACT/ROUTER](http://rackt.github.io/react-router/)
- * [browserify](http://browserify.org/)
+ * [React Router](https://github.com/rackt/react-router)
+ * [Flux](https://facebook.github.io/flux/)
  * [jQuery](http://jquery.com/)
  * [Lo-Dash](http://lodash.com/)
- * [material-ui](https://github.com/callemall/material-ui)
+ * [classnames](https://www.npmjs.com/package/classnames)
+ * [superagent](https://github.com/visionmedia/superagent)
+ * [Framework7](http://www.idangero.us/framework7/)
 
 ## Build Tools
 
  * [ESlint](http://eslint.org/)
+  * [React .eslintrc](https://github.com/facebook/react/blob/master/.eslintrc)
  * [Babel](https://babeljs.io/)
-
-## Included SASS libraries/framework
-
- * [Bourbon](http://bourbon.io/)
-
- > A simple and lightweight mixin library for Sass.
-
- * [Bourbon NEAT](http://neat.bourbon.io/)
-
- > A lightweight semantic grid framework for Sass and Bourbon.
+ * [Webpack](https://github.com/webpack/webpack)
 
 ## API
 
-By default the root access for the API is http://localhost:3000/api. Available example: http://localhost:3000/api/tools
+By default the root access for the API is http://localhost:8080/api. Available example: http://localhost:8080/api/tools
 
 ## Sources
 
  * [Getting Started](https://facebook.github.io/react/docs/getting-started.html)
  * [React tutorial](https://facebook.github.io/react/docs/tutorial.html)
- * [material-ui](https://github.com/callemall/material-ui)
+ * [React Router](https://github.com/rackt/react-router)
+  * [Upgrade Guide](https://github.com/rackt/react-router/blob/master/UPGRADE_GUIDE.md)
+  * [React Router Histories](https://github.com/rackt/react-router/blob/master/docs/guides/basics/Histories.md)
+ * [Flux](https://facebook.github.io/flux/)
+ * [Framework7](http://www.idangero.us/framework7/get-started/)
+ * [React Webpack Cookbook](http://christianalfoni.github.io/react-webpack-cookbook/index.html)
+ * [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
 
 ## Tips and tricks
 
@@ -135,15 +129,3 @@ By default the root access for the API is http://localhost:3000/api. Available e
  * [babelify](https://www.npmjs.com/package/babelify)
 
  > babelify - Set stage option to 0 for to have all ES7 experimental features
-
-## Encountered problems
-
- * [Fast browserify builds with watchify](https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md)
-
-### Use foundation with browserify
-
-* [foundation with browserify](http://foundation.zurb.com/forum/posts/24951-foundation-with-browserify)
-
-* [browserify-shim](https://github.com/thlorenz/browserify-shim)
-
- > I no longer use the Foundation css framework but in case it can help you.
